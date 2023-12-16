@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "title": "Root Schema",
+  "type": "object",
+  "default": {},
+  "required": ["data", "support"],
+  "properties": {
+    "data": {
+      "type": "object",
+      "default": {},
+      "title": "The Data Schema",
+      "required": ["id","username","firstName","lastName","email","password","phone","userStatus"],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "default": 0,
+          "title": "the id schema",
+          "examples": [10]
+        },
+        "username": {
+          "type": "string",
+          "default": "",
+          "title": "the username schema",
+          "examples": ["saya_DS23"]
+        },
+        "firstname": {
+          "type": "string",
+          "default": "",
+          "title": "the firstname schema",
+          "examples": ["namasaya"]
+        },
+        "lastname": {
+          "type": "string",
+          "default": "",
+          "title": "the lastname schema",
+          "examples": ["adalah"]
+        },
+        "email": {
+          "type": "string",
+          "default": "",
+          "title": "the email schema",
+          "examples": ["namasaya@example.com"]
+        },
+        "password": {
+          "type": "string",
+          "default": "",
+          "title": "the password schema",
+          "examples": ["nama$1234"]
+        },
+        "phone": {
+          "type": "string",
+          "default": "",
+          "title": "the phone schema",
+          "examples": ["081234567890"]
+        },
+        "userStatus": {
+          "type": "integer",
+          "default": 0,
+          "title": "the user_status schema",
+          "examples": [0]
+        }
+      },
+      "examples": [{
+        "id": 0,
+        "username": "string",
+        "firstName": "string",
+        "lastName": "string",
+        "email": "string",
+        "password": "string",
+        "phone": "string",
+        "userStatus": 0
+      }]
+    },
+    "support": {
+      "type": "object",
+      "default": {},
+      "title": "The support Schema",
+      "required": [
+        "url"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "default": "",
+          "title": "The url Schema",
+          "examples": [
+            "https://petstore.swagger.io/v2/"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "url": "https://petstore.swagger.io/v2/"
+        }]
+    }
+  }
+
+}
